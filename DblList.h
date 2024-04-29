@@ -2,10 +2,8 @@
 #define DBLLIST_H
 
 #include "ListNode.h"
-#include <iostream>
 
-
-//templated doubly linked list with pointers to next and prev
+//doubly linked list with pointers to next and prev
 
 template <class T>
 class DblList{
@@ -85,7 +83,7 @@ void DblList<T>::insertBack(T d){
 }
 
 template <class T>
-int DblList<T>::removeFront(){
+T DblList<T>::removeFront(){
 
     if(isEmpty()){
         throw runtime_error("list is empty");
@@ -102,7 +100,7 @@ int DblList<T>::removeFront(){
     }
     front = front->next;
     temp->next = NULL;
-    int data = temp->data;
+    T data = temp->data;
     --size;
     delete temp;
 
@@ -110,7 +108,7 @@ int DblList<T>::removeFront(){
 }
 
 template <class T>
-int DblList<T>::removeBack(){
+T DblList<T>::removeBack(){
 
     if(isEmpty()){
         throw runtime_error("list is empty");
@@ -126,7 +124,7 @@ int DblList<T>::removeBack(){
     }
     back = back->prev;
     temp->prev = NULL;
-    int data = temp->data;
+    T data = temp->data;
     --size;
     delete temp;
 
@@ -134,7 +132,7 @@ int DblList<T>::removeBack(){
 }
 
 template <class T>
-int DblList<T>::find(T value){
+T DblList<T>::find(T value){
      int pos = -1; // variable to idetify position of node with matching value
     ListNode<T> *curr = front;
 
@@ -152,7 +150,7 @@ int DblList<T>::find(T value){
 }
 
 template <class T>
-int DblList<T>::removeNode(T value){
+T DblList<T>::removeNode(T value){
 
     if(isEmpty()){
         throw runtime_error("list is empty");
@@ -228,37 +226,4 @@ void DblList<T>::printList(bool printLink)
     cout << endl;
 }
 
-/*
-*
-* LIST NODE CLASS !!
-*
-*/
-
-template <class T>
-class ListNode{
-    public:
-        ListNode();
-        ListNode(T d);
-        ~ListNode();
-        T data;
-        ListNode *next;
-        ListNode *prev;   
-};
-
-
-template <class T>
-ListNode<T>::ListNode(){}
-
-template <class T>
-ListNode<T>::ListNode(T d){
-    data = d;
-    next = NULL;
-    prev = NULL;
-}
-
-template <class T>
-ListNode<T>::~ListNode(){}
-
-
 #endif
-
