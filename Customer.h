@@ -6,15 +6,17 @@
 class Customer {
     public:
         Customer();
-        Customer(int arrivalTime, int serviceTimes[]); // {registrar, cashier, finAid}
+        Customer(int serviceTimes[], char windowOrder[]); // service times: {registrar, cashier, finAid}
         ~Customer();
     
     private:
-        int arrivalTime;
         int regTime;
         int casTime;
         int finTime;
+        char win1; //window 1
+        char win2; //window 2
+        char win3; //window 3
 
-}
+};
 
 #endif

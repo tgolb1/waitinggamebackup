@@ -4,6 +4,7 @@
 class Office {
     public:
         Office();
+        Office(int numWindows);
         ~Office();
 
     private:

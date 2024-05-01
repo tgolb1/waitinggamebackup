@@ -2,6 +2,7 @@
 
 int main(){
 
+/*
     ListQueue<int> *lq = new ListQueue<int>();
 
     lq->enqueue(1);
@@ -24,5 +25,6 @@ int main(){
 
 
     return 0;
+*/
 
 }
