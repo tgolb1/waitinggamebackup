@@ -5,9 +5,9 @@ Office::Office() {
 }
 
 Office::Office(int numWin) {
-    numWindows = numWin;
+    for (int i = 0; i < numWin; ++i){
+        windows[i] = new Window();
+    }
 }
 
-Office::~Office() {
-    
-}
+Office::~Office() {}

@@ -1,6 +1,9 @@
 #ifndef OFFICE_H
 #define OFFICE_H
 
+#include "Window.h"
+#include <iostream>
+
 class Office {
     public:
         Office();
@@ -9,6 +12,7 @@ class Office {
 
     private:
         int numWindows;
+        Window *windows[];
 };
 
 

@@ -14,8 +14,7 @@ ServiceCenter::ServiceCenter(string inputFile){
     }
 
     for(int i = 0; i < 3; ++i){ //first 3 lines are windows open
-        getline(inFile, line);
-        windowsOpen[i] = stoi(line); //[0],[1],[2] = registrar, cashier, financialAid (respectively)
+        inFile >> windowsOpen[i]; //[0],[1],[2] = registrar, cashier, financialAid (respectively)
     }
     
     registrar = new Office(windowsOpen[0]);
