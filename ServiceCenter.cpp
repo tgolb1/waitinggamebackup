@@ -5,8 +5,6 @@ ServiceCenter::ServiceCenter(){}
 ServiceCenter::ServiceCenter(string inputFile){
     queue = new ListQueue<Customer>();
     openWindows(inputFile);
-    inFile >> curTime; 
-    setTime(curTime);
     simulate();
 }
 
@@ -34,11 +32,15 @@ void ServiceCenter::simulate(){
 
     while(true){
         if(!(inFile >> curTime)){
+            inFile.close();
             break;
         }
+        setTime(curTime);
         inFile >> customers;
+        cout << "\n\n\nCustomers arriving: " << customers << endl;
         for (int i = 0; i < customers; ++i){
             inFile >> rT >> cT >> fT >> a >> b >> c;
+            //cout << rT << cT << fT << endl;
             curr = new Customer(rT, cT, fT, a, b, c);
             cout << "\n------\nCustomer Added:\n\n" << curr->toString() << endl;
         }

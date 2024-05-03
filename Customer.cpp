@@ -14,5 +14,5 @@ Customer::Customer(int rT, int cT, int fT, char a, char b, char c) {
 Customer::~Customer(){}
 
 string Customer::toString(){
-    return ("rT cT fT\n" + to_string(regTime) + "  " + to_string(casTime) + "  " + to_string(regTime) + "\n\nwin1 win2 win3" + (win1) + "   " + (win2) + "   " + (win3));
+    return ("rT cT fT\n" + to_string(regTime) + "  " + to_string(casTime) + "  " + to_string(finTime) + "\n\nwin1 win2 win3\n" + (win1) + "    " + (win2) + "    " + (win3));
 }
