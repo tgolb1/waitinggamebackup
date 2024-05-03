@@ -1,14 +1,17 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include "Customer.h"
+
 class Window {
     public:
         Window();
         ~Window();
+        void service(Customer c);
 
-    private:
-        bool isIdle;
+        bool isOpen;
         int idleTime;
+        int serviceTime;
         int timeConsumed;
 
 };

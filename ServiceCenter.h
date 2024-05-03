@@ -15,17 +15,18 @@ class ServiceCenter {
         ServiceCenter();
         ServiceCenter(string inputFile);
         ~ServiceCenter();
-        void step();
+        void openWindows(string inputFile);
+        void setTime(int t);
+        void simulate();
     
     private:
-        int curTime;
-        int customers;
         Office *registrar;
         Office *cashier;
         Office *finAid;
+        int curTime;
+        int customers;
         ifstream inFile;
         ListQueue<Customer> *queue;
-        int windowsOpen[];
 };
 
 #endif

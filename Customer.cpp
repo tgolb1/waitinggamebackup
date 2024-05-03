@@ -2,13 +2,17 @@
 
 Customer::Customer(){}
 
-Customer::Customer(int serviceTimes[], char windowOrder[]) {
-    regTime = serviceTimes[0];
-    casTime = serviceTimes[1];
-    finTime = serviceTimes[2];
-    win1 = windowOrder[0];  //window 1, etc
-    win2 = windowOrder[1];
-    win3 = windowOrder[2];
+Customer::Customer(int rT, int cT, int fT, char a, char b, char c) {
+    regTime = rT; //registrar time
+    casTime = cT; //cashier time
+    finTime = fT; //finAid time
+    win1 = a;  //window 1, etc
+    win2 = b;
+    win3 = c;
 }
 
 Customer::~Customer(){}
+
+string Customer::toString(){
+    return ("rT cT fT\n" + to_string(regTime) + "  " + to_string(casTime) + "  " + to_string(regTime) + "\n\nwin1 win2 win3" + (win1) + "   " + (win2) + "   " + (win3));
+}

@@ -3,7 +3,7 @@
 
 #include "ListNode.h"
 
-//doubly linked list with pointers to next and prev
+//templated doubly linked list with pointers to next and prev
 
 template <class T>
 class DblList{

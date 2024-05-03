@@ -2,12 +2,16 @@
 #define CUSTOMER_H
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 class Customer {
     public:
         Customer();
-        Customer(int serviceTimes[], char windowOrder[]); // service times: {registrar, cashier, finAid}
+        Customer(int rT, int cT, int fT, char a, char b, char c);
         ~Customer();
+        string toString();
     
     private:
         int regTime;

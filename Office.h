@@ -2,6 +2,9 @@
 #define OFFICE_H
 
 #include "Window.h"
+#include "ListQueue.h"
+#include "Customer.h"
+
 #include <iostream>
 
 class Office {
@@ -9,9 +12,12 @@ class Office {
         Office();
         Office(int numWindows);
         ~Office();
+        void enqueue(Customer c);
+        void assignWindow(Customer c);
 
     private:
         int numWindows;
+        ListQueue<Customer> *lq;
         Window *windows[];
 };
 
