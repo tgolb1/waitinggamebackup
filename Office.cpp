@@ -22,9 +22,16 @@ void Office::enqueue(Customer c){
 }
 
 void Office::assignWindow(Customer c){
+    cout << "Customer added to window." << endl;
     for(int i = 0; i < numWindows; ++i){
         if ((windows[i]->isOpen)){
             windows[i]->service(c);
         }
+    }
+}
+
+void Office::update(){
+    for(int i = 0; i < numWindows; ++i){
+        windows[i]->updateWindow();
     }
 }

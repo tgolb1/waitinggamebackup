@@ -16,17 +16,17 @@ class ServiceCenter {
         ServiceCenter(string inputFile);
         ~ServiceCenter();
         void openWindows(string inputFile);
-        void setTime(int t);
         void simulate();
     
     private:
         Office *registrar;
         Office *cashier;
         Office *finAid;
-        int curTime;
+        int nextTime;
         int customers;
         ifstream inFile;
         ListQueue<Customer> *queue;
+        int tick;
 };
 
 #endif

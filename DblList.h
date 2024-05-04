@@ -7,11 +7,11 @@
 
 template <class T>
 class DblList{
-    private:
+    public:
         ListNode<T> *front;
         ListNode<T> *back;
         unsigned int size;
-    public:
+        
         DblList();
         ~DblList();
 

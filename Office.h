@@ -14,10 +14,11 @@ class Office {
         ~Office();
         void enqueue(Customer c);
         void assignWindow(Customer c);
+        void update();
+        ListQueue<Customer> *lq;
 
     private:
         int numWindows;
-        ListQueue<Customer> *lq;
         Window *windows[];
 };
 

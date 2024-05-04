@@ -12,15 +12,16 @@ class Customer {
         Customer(int rT, int cT, int fT, char a, char b, char c);
         ~Customer();
         string toString();
+        void update();
     
-    private:
         int regTime;
         int casTime;
         int finTime;
         char win1; //window 1
         char win2; //window 2
-        char win3; //window 3
-
+        char win3; //window 3;
+        char curWindow;
+        int waitingTime;
 };
 
 #endif

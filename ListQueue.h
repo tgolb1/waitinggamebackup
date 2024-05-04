@@ -12,8 +12,6 @@ class ListQueue{
         T dequeue();
         T peek();
         void printQueue();
-
-    private:
         bool isEmpty();
         int getSize();
         DblList<T> *list;
